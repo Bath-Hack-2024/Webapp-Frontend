@@ -1,3 +1,10 @@
+import "@/css/Station.css";
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import SatelliteAlt from '@mui/icons-material/SatelliteAlt';
+
 export interface StationProps {
   lat: number;
   lng: number;
@@ -5,13 +12,18 @@ export interface StationProps {
 }
 
 function Station(props: StationProps) {
-  console.log(`do something with: ${props}`)
   return (
-    <div data-testid="station">
-      <h2>{props.name}</h2>
-      <p>Latitude: {props.lat}</p>
-      <p>Longitude: {props.lng}</p>
-    </div>
+    <ListItem className="station" data-testid="station">
+      <ListItemAvatar>
+        <Avatar>
+          <SatelliteAlt />
+        </Avatar>
+      </ListItemAvatar>
+      <ListItemText
+        primary={props.name}
+        secondary={`Latitude: ${props.lat}, Longitude: ${props.lng}`}
+      />
+    </ListItem>
   )
 }
 

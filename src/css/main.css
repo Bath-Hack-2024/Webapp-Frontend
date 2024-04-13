@@ -5,11 +5,11 @@
 }
 
 :root {
-  --background: #212121;
-  --background-dark: #000;
-  --text-color: #fff;
-  --highlight: #1976d2;
-  --highlight-dark: #002959;
+  --background: #749BC2;
+  --background-dark: #4682A9;
+  --text-color: #F6F4EB;
+  --highlight: #91C8E4;
+  --highlight-dark: #a9b4c2;
 }
 
 html {

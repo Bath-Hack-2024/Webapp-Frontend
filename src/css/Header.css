@@ -3,5 +3,5 @@
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background-color: var(--highlight);
+  background-color: var(--background-dark);
 }
