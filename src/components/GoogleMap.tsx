@@ -49,6 +49,7 @@ interface MarkerProps {
 }
 
 const Marker = (props: MarkerProps) => {
+  const { markerId } = props
   return (
     <div
       style={{
@@ -61,7 +62,7 @@ const Marker = (props: MarkerProps) => {
         backgroundColor: "red",
       }}
     >
-      I'm a marker!
+      I'm marker {markerId}
     </div>
   )
 }
