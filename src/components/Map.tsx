@@ -15,9 +15,7 @@ const coordinates = [
 
 const Map = () => {
   return (
-    <div
-      data-testid="google-map"
-    >
+    <div>
       <GoogleMap
         apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
         defaultCenter={{ lat: 45.4046987, lng: 12.2472504 }}
