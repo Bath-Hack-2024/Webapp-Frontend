@@ -1,4 +1,5 @@
 import GoogleMap from "google-maps-react-markers";
+import Marker from "./Marker";
 
 const coordinates = [
   { lat: 45.4046987, lng: 12.2472504, name: 'Venice' },
@@ -21,14 +22,13 @@ const Map = () => {
         defaultCenter={{ lat: 45.4046987, lng: 12.2472504 }}
         defaultZoom={5}
         mapMinHeight="100vh"
-        onChange={(map) => console.log('Map moved', map)}
       >
         {coordinates.map(({ lat, lng, name }, index) => (
           <Marker
             key={index}
             lat={lat}
             lng={lng}
-            markerId={name}
+            text={name}
           // onClick={onMarkerClick} // you need to manage this prop on your Marker component!
           // draggable={true}
           // onDragStart={(e, { latLng }) => {}}
@@ -41,30 +41,4 @@ const Map = () => {
   )
 }
 
-interface MarkerProps {
-  lat: number
-  lng: number
-  markerId: string
-  onClick?: (markerId: string) => void
-}
-
-const Marker = (props: MarkerProps) => {
-  const { markerId } = props
-  return (
-    <div
-      style={{
-        position: "absolute",
-        top: "100%",
-        left: "50%",
-        height: "24px",
-        width: "24px",
-        transform: "translate(-50%, -100%)",
-        backgroundColor: "red",
-      }}
-    >
-      I'm marker {markerId}
-    </div>
-  )
-}
-
-export default Map
+export default Map;
