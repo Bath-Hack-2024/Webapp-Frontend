@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# WebApp Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This repository contains the frontend codebase for the WebApp project. It's built with React and utilizes Vite for development and building processes.
 
-Currently, two official plugins are available:
+## Installation
+To install and run the project locally, follow these steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone this repository: `git clone git@github.com:Bath-Hack-2024/Webapp-Frontend.git`
 
-## Expanding the ESLint configuration
+2. Navigate to the project directory: cd webapp-frontend
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. Install dependencies: `npm i`
 
-- Configure the top-level `parserOptions` property like this:
+## Scripts
+- `dev`: Starts the development server using Vite.
+- `build`: Builds the project for production using TypeScript and Vite.
+- `lint`: Lints the code using ESLint with TypeScript support.
+- `preview`: Starts a preview server using Vite.
+- `test`: Runs tests using Jest.
+- `coverage`: Generates code coverage reports.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Usage
+After installation, you can use the provided scripts to develop, build, test, and preview the application.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Dependencies
+- React: "^18.2.0"
+- React-dom: "^18.2.0"
+
+## Notes
+- This project is configured to use TypeScript for type-checking and Vite for faster development.
+- ESLint is set up to enforce coding standards and best practices.
+- Jest is used for unit testing.
+- Code coverage reports are generated for components under 'src/components'.
+
+## Contributing
+Contributions are welcome! Please see the CONTRIBUTING.md file for guidelines.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
