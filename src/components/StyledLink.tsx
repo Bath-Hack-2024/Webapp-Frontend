@@ -1,4 +1,5 @@
-import { Link, LinkProps } from "react-router-dom";
+import { Link, LinkProps, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "@/css/StyledLink.css";
 
 interface StyledLinkProps {
@@ -6,14 +7,23 @@ interface StyledLinkProps {
   children: React.ReactNode;
 }
 
-export default function StyledLink(props: StyledLinkProps) {
-  const { to, children } = props;
+function StyledLink({ to, children }: StyledLinkProps) {
+  const location = useLocation();
+
+  const [linkClass, setLinkClass] = useState("link");
+
+  useEffect(() => {
+    setLinkClass(location.pathname === to ? "link active" : "link");
+  }, [location.pathname]);
+
   return (
     <Link
-      className="link"
+      className={linkClass}
       to={to}
     >
       {children}
     </Link>
   )
 }
+
+export default StyledLink;
