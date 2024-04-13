@@ -1,4 +1,4 @@
-import GoogleMap from 'google-maps-react-markers'
+import GoogleMap from "google-maps-react-markers";
 
 const coordinates = [
   { lat: 45.4046987, lng: 12.2472504, name: 'Venice' },
@@ -13,9 +13,11 @@ const coordinates = [
   { lat: -33.8688197, lng: 151.2092955, name: 'Sydney' },
 ]
 
-const App = () => {
+const Map = () => {
   return (
-    <>
+    <div
+      data-testid="google-map"
+    >
       <GoogleMap
         apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
         defaultCenter={{ lat: 45.4046987, lng: 12.2472504 }}
@@ -29,15 +31,15 @@ const App = () => {
             lat={lat}
             lng={lng}
             markerId={name}
-            // onClick={onMarkerClick} // you need to manage this prop on your Marker component!
-            // draggable={true}
-            // onDragStart={(e, { latLng }) => {}}
-            // onDrag={(e, { latLng }) => {}}
-            // onDragEnd={(e, { latLng }) => {}}
+          // onClick={onMarkerClick} // you need to manage this prop on your Marker component!
+          // draggable={true}
+          // onDragStart={(e, { latLng }) => {}}
+          // onDrag={(e, { latLng }) => {}}
+          // onDragEnd={(e, { latLng }) => {}}
           />
         ))}
       </GoogleMap>
-    </>
+    </div>
   )
 }
 
@@ -67,4 +69,4 @@ const Marker = (props: MarkerProps) => {
   )
 }
 
-export default App
+export default Map
