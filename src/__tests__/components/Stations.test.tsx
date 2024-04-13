@@ -4,7 +4,7 @@ import Stations from "@/components/Stations";
 describe("Stations", () => {
   test("renders station names", () => {
     render(<Stations />);
-    const stationElements = screen.getAllByRole("listitem");
+    const stationElements = screen.getAllByTestId("station");
     expect(stationElements).toHaveLength(10);
     expect(stationElements[0]).toHaveTextContent("Sydney");
     expect(stationElements[1]).toHaveTextContent("Melbourne");
