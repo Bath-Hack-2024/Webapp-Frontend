@@ -1,6 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --background: #212121;
+  --background-dark: #000;
   --text-color: #fff;
+  --highlight: #1976d2;
+  --highlight-dark: #002959;
 }
 
 html {
