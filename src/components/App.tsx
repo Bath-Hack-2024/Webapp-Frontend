@@ -1,4 +1,4 @@
-import GoogleMap from "./GoogleMap";
+import GoogleMap from "./Map";
 
 export default function App() {
   return (
