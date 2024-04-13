@@ -11,11 +11,9 @@ describe("Station", () => {
     
     render(<Station {...stationProps} />);
     const stationNameElement = screen.getByText(stationProps.name);
-    const latitudeElement = screen.getByText(`Latitude: ${stationProps.lat}`);
-    const longitudeElement = screen.getByText(`Longitude: ${stationProps.lng}`);
-    
+    const locationElement = screen.getByText(`Latitude: ${stationProps.lat}, Longitude: ${stationProps.lng}`);
+
     expect(stationNameElement).toBeInTheDocument();
-    expect(latitudeElement).toBeInTheDocument();
-    expect(longitudeElement).toBeInTheDocument();
+    expect(locationElement).toBeInTheDocument();
   });
 });

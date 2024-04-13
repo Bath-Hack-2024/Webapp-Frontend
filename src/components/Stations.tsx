@@ -1,3 +1,4 @@
+import { List } from "@mui/material"
 import Station, { StationProps } from "./Station"
 
 const stations: StationProps[] = [
@@ -15,13 +16,10 @@ const stations: StationProps[] = [
 
 export default function Stations() {
   return (
-    <div>
-      <h1>Stations</h1>
-      <ul>
-        {stations.map((station, index) => (
-          <Station {...station} key={index} />
-        ))}
-      </ul>
-    </div>
+    <List>
+      {stations.map((station, index) => (
+        <Station {...station} key={index} />
+      ))}
+    </List>
   )
 }

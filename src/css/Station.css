@@ -1,0 +1,12 @@
+.station {
+  flex-direction: row;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  max-width: 400px;
+}
+
+.MuiTypography-root {
+  color: var(--text-color)!important;
+}
